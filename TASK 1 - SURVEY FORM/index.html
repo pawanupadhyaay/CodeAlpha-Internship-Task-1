@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Survey-Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+</head>
+<body onload = "showPage(1)">
+    <div class = "page" id="page1">
+        <h1 style="font-family: cursive;"> Welcome to Our Survey!</h1>
+        <div class = "question">
+            <label>Full Name: </label>
+            <input type="text" id = "question1_1" placeholder= "Name" required>
+            <label>Email :</label>
+            <input type="text" id = "question1_2" placeholder="Enter email " required>
+            <label>Phone no :</label>
+            <input type="tel" id = "phone" name = "phone" pattern = "[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+            <label>Country :</label>
+            <input type="text" id="question1_3" placeholder="Country">
+             <label> Gender :</label>
+             <select name="gender">
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+             </select>
+
+        </div>
+        <button onclick = "saveDataAndMoveNext(1)">Next</button>
+    </div>
+
+
+    <div class = "page" id = "page2">
+        <h1 style = "font-family: cursive;"> Quality of DSA Course:</h1>
+        <div class = "question">
+            <div class = "radio-left">
+                <input type="radio" name = "radio1"> &nbsp;&nbsp;&nbsp;&nbsp; Excellent
+                <br> <br>
+                <input type="radio" name = "radio1">&nbsp;&nbsp;&nbsp;&nbsp; Very Good
+                <br> <br>
+                <input type="radio" name = "radio1">&nbsp;&nbsp;&nbsp;&nbsp; Good
+                <br> <br>
+                <input type="radio" name = "radio1">&nbsp;&nbsp;&nbsp;&nbsp; Average
+                <br> <br>
+                <input type="radio" name = "radio1">&nbsp;&nbsp;&nbsp;&nbsp; Below Average
+                <br>
+            </div> <br><hr>
+            <label>Feedback :</label>
+        <textarea id="question1_5" cols="30" rows="10" placeholder="Please give your Valuable Feedback"></textarea>    
+        </div>
+        <button onclick="moveToPreviousPage(2)">Previous</button>
+        <button onclick = "saveDataAndMoveNext(2)">Next</button>
+    </div>
+    <div class = "page" style="display: none" id = "page3">
+    <h1 style="font-family: cursive;">Thank You <br><hr> Survey Completed...</h1>
+
+</div>
+   
+    
+</body>
+</html>
